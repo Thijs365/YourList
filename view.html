@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>View list | YourList</title>
+		<script src="script.js"></script>
+		<script src="lockr/lockr.js"></script>
+		<style>
+			@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+			body{
+				background-color: black;
+				font-family: "Titillium Web";
+			}
+			#listitems li {
+				border-radius: 10px;
+				list-style: none;
+				background: #eee;
+				padding: 5px 10px;
+				margin-bottom: 5px;
+			}
+			#listitems li:nth-child(2n) {
+				background: #ccc;
+			}
+			#logo1{color:gold}
+			#logo2{color:yellow}
+			#logo3{color:red}
+			.logobanner{
+				letter-spacing:-6px;
+				font-family: courier, monospace
+			}
+		</style>
+	</head>
+	<body onload="editList('show', 'view');">
+		<div id="listitems"></div>
+		<!--Logo start-->
+		<span id="logo1">Your</span><span id="logo2">List</span><span id="logo3">.com</span>
+		<!--Logo end-->
+	</body>
+</html>

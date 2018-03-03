@@ -1,0 +1,291 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+
+*{
+	font-size:21px;
+}
+button, input[type=button], input[type=submit] {
+	-moz-box-shadow: 1px 4px 6px -2px #91b8b3;
+	-webkit-box-shadow: 1px 4px 6px -2px #91b8b3;
+	box-shadow: 1px 4px 6px -2px #91b8b3;
+	background-color:#768d87;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	text-decoration:none;
+	text-shadow:2px 2px 0px #2b665e;
+	font-size:20px;
+	-webkit-appearance: none;
+
+}
+button:hover {
+	background-color:#6c7c7c;
+	-webkit-appearance: none;
+}
+button:active {
+	position:relative;
+	top:1px;
+	-webkit-appearance: none;
+}
+input[type=button]:hover {
+	background-color:#6c7c7c;
+	-webkit-appearance: none;
+}
+input[type=button]:active {
+	position:relative;
+	top:1px;
+	-webkit-appearance: none;
+}
+body{
+    background: #4DA0B0; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #4DA0B0 , #D39D38); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #4DA0B0 , #D39D38);
+}
+h1{
+    color:brown;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number],
+#description,
+select,
+#changeTo{
+    border-radius:0px;
+    background:white;
+    border-style:none;
+    border-bottom:7px groove;
+}
+#listitems li {
+border-radius: 10px;
+list-style: none;
+background: #eee;
+padding: 5px 10px;
+margin-bottom: 5px;
+}
+#listitems ul{
+	padding: 5px;	
+}
+#listitems li:nth-child(2n) {
+background: #ccc;
+}
+ul{
+list-style-image: url("arrow.png");
+}
+input[type=checkbox]{
+border-radius:0px;
+border-style:none;
+}
+input[type=checkbox]:checked{
+background-color:orange;
+border: 3px solid;
+}
+.overview{
+    position:fixed;
+    width:100%;
+    height:100px;
+    background:grey;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #8e9eab; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #8e9eab , #eef2f3); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #8e9eab , #eef2f3);
+}
+option{
+    position:absolute;
+    
+	background: #DE6262;
+}
+#editbox,
+#addbox{
+	position:fixed;
+	background: #DE6262; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #DE6262 , #FFB88C); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #DE6262 , #FFB88C);
+	padding: 10px;
+	border:3px;
+	border-radius:10px;
+	border-color: black;
+	border-style:groove;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	z-index: 123456789;
+}
+#logo1{color:gold}
+#logo2{color:yellow}
+#logo3{color:red}
+div#listitems{
+    max-height:2800px;
+    overflow:scroll;
+    border-radius: 5px;
+    border:2px solid;
+    background: #e96443; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #e96443 , #904e95); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #e96443 , #904e95); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height:800px;
+}
+a {
+    position: relative;
+    display: inline-block;
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	z-index:0;
+}
+
+a:hover,
+a:focus {
+    outline: none;
+}
+/* aeff stands for advanced extra fricking hyperlinks lol
+Also, I didn't make those links. */
+.aeff a {
+    line-height: 2em;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    perspective: 800px;
+	font-size: 17.5px;
+}
+
+.aeff a span {
+    position: relative;
+    display: inline-block;
+    background: #587285;
+    box-shadow: inset 0 3px #2f4351;
+    -webkit-transition: background 0.6s;
+    -moz-transition: background 0.6s;
+    transition: background 0.6s;
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 0% 50%;
+    -moz-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.aeff a span::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    color: #2f4351;
+    content: attr(data-hover);
+    -webkit-transform: rotateX(270deg);
+    -moz-transform: rotateX(270deg);
+    transform: rotateX(270deg);
+    -webkit-transition: -webkit-transform 0.6s;
+    -moz-transition: -moz-transform 0.6s;
+    transition: transform 0.6s;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.aeff a:hover span,
+.aeff a:focus span {
+    background: #2f4351;
+}
+
+.aeff a:hover span::before,
+.aeff a:focus span::before {
+    -webkit-transform: rotateX(10deg);  
+    -moz-transform: rotateX(10deg);
+    transform: rotateX(10deg);
+}
+sup,
+sub{
+    font-size:9px;
+}
+
+body, input, button{
+    font-family: 'Titillium Web', sans-serif;
+}
+.logobanner{
+    letter-spacing:-6px;
+    font-family: courier, monospace
+}
+.notvisible{
+    visibility: hidden;
+}
+@media only screen and (max-device-width: 480px) {
+	*{
+		display:block;
+	}
+	button, input[type=button], input[type=text]{
+		font-size: 80%;
+		display: inline;
+	}
+	script, style, title{
+		display:none;
+	}
+	.logobanner, #logo1, #logo2, #logo3{
+		display: inline;
+	}
+	.overview{
+		height: 140px;
+	}
+	#addbox input{
+		display: block;
+		font-size: 10px;
+		width: 100px;
+		height: 15px;
+		
+	}
+	#addbox *{
+		margin-left: 50px;
+	}
+	#addbox{
+		width: 100%;
+		padding: 10px;
+		z-index: 3;
+		position: absolute;
+		top: 0;
+		
+	}
+}
+
+#desc{
+	display: inline-block;
+	overflow: scroll;
+	cursor: text;
+	min-width: 500px;
+	min-height: 100px;
+}
+#changeTo{
+	display: inline-block;
+	cursor: text;
+	min-width: 100%;
+}
+summary{
+	cursor: pointer;
+}
+#backtohomepage{
+	width:100%;
+	position: fixed;
+	top: -25px;
+	color: black;
+	left: 0;
+	right: 0;
+	background: #ADA996;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
