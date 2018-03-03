@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>YourList Mobile</title>
+    <link rel="stylesheet" href="mobile.css">
+    <script src="../script.js"></script>
+    <script src="../lockr/lockr.js"></script>
+  </head>
+  <body onload="onloadList();">
+    <!--This input is needed, because the script crashes when it doesn't detect 'workingList'-->
+    <input type="hidden" id="workingList">
+    <div id="body">
+      <div id="listitems"></div>
+    </div>
+  </body>
+</html>

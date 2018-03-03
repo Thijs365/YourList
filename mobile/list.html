@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<title>YourList Mobile</title>
+		<link rel="stylesheet" href="mobile.css">
+		<script src="../script.js"></script>
+		<script src="../lockr/lockr.js"></script>
+        </head>
+        <body onload="onloadList();">
+                <!--This input is needed, because the script crashes when it doesn't detect 'workingList'-->
+                <input type="hidden" id="workingList">
+                <div class="overview">
+                        <button id="add" onclick="editDisplay('addbox', 'block'); document.getElementById('edit').disabled = true;">Add entry</button>
+                        <button id="edit" onclick="editDisplay('editbox', 'block'); document.getElementById('add').disabled = true; editDisplay('changeFavourite', 'none');">Edit entry</button>
+                        
+
+                </div>
+                <div class="right">
+                        <div id="editbox" style="display:none;">
+                                <form id="editForm" autocomplete="off">
+                                        What do you want to change?<br>
+                                        <select id="valueToChange" onchange="checkForFavouriteEdit(this.value);">
+                                                <option value="Editproductname">Product name</option>
+                                                <option value="Editpriceprefix">Price prefix</option>
+                                                <option value="Editprice">Price</option>
+                                                <option value="Editshop">Shop</option>
+                                                <option value="Editdescr">Description</option>
+                                                <option value="EditproductURL">URL</option>
+                                                <option value="Editimg">Image</option>
+                                                <option value="Editfavourite" id="favouritenot1">Favourite or not</option>
+                                        </select><hr>
+                                        <textarea id="changeTo" placeholder="New value"></textarea>
+                                        <p id="changeFavourite"><input type="checkbox" id="favourite1"><label for="favourite1">Favourite?</label><br></p>
+                                        <!-- ioetbc = index of entry to be changed -->
+                                        <hr>What's the number before the title of the entry?<br>
+                                        <input type="number" id="ioetbc"><hr>
+                                        <input type="button" value="Edit" onclick="editList('edit')">
+                                        <input type="button" value="Cancel" onclick="editDisplay('editbox', 'none'); document.getElementById('add').disabled = false;">
+                                </form>
+                        </div>
+                        <div id="addbox" style="display:none;">
+                                <form id="addForm">
+                                        <input type="text" id="productname" placeholder="Product name">
+                                        <hr>
+                                        <select id="price2">
+                                                <option value=" "></option>
+                                                <option value="Sale: ">Sale</option>
+                                                <option value="Starting from ">Starting from</option>
+                                        </select><br>
+                                        &euro;<input type="number" id="price">
+                                        <hr>
+                                        <input type="text" id="shop" placeholder="Shop">
+                                        <hr>
+                                        <input type="text" id="productURL" placeholder="Hyperlink">
+                                        <hr>
+                                        <input type="text" id="img" placeholder="Image-URL"><br>
+                                        <hr>
+                                        <span id="favouriteornot">Favourite? <input type="checkbox" id="favourite"></span><br>
+                                        <hr>
+					<span>Description:</span><br>
+                                        <div class="editable" contenteditable="" id="description"></div><hr>
+                                        <input type="button" value="Add" onclick="editList('add');">
+                                        <input type="button" value="Cancel" onclick="editDisplay('addbox', 'none'); document.getElementById('edit').disabled = false;"><br>
+                                </form>
+                        </div>
+                </div>
+                <div id="body">
+                        <br>
+                        <div id="listitems"></div>
+                </div>
+        </body>
+</html>
